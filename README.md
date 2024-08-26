@@ -49,3 +49,6 @@ This repository contains your solutions to three simple data structures and algo
 - Push your changes to your forked repository.
 - Create a pull request (PR) to the original repository with your solutions.
 - Submit the URL of your GitHub repository as your final submission.
+
+### Submission form 
+https://forms.gle/VUTFyWTXKUPq4CMQA
