@@ -1,54 +1,39 @@
-# Data Structures and Algorithms Practice
+# Overview
 
-This repository contains your solutions to three simple data structures and algorithms problems. Please follow the instructions below to complete the tasks and submit your work.
+This project contains three separate implementations demonstrating basic data structures and algorithms in Python. The focus is on using stacks, queues, and linked lists for specific tasks.
 
-## Questions
+1. Reverse a String Using a Stack
 
-### 1. Reverse a String Using a Stack
-- **Task:** Implement a stack data structure to reverse a string.
-- **Function:** `reverse_string(s: str) -> str`
-- **Example:**
-  - Input: `"hello"`
-  - Output: `"olleh"`
+Purpose: Reverse a given string using the Last In, First Out (LIFO) property of a stack.
 
-### 2. Implement a Queue Using Two Stacks
-- **Task:** Implement a queue using two stacks.
-- **Class:** `QueueWithStacks`
-- **Methods:**
-  - `enqueue(x: int)`: Adds an element to the queue.
-  - `dequeue() -> int`: Removes and returns the front element of the queue.
-- **Example:**
-  ```python
-  q = QueueWithStacks()
-  q.enqueue(1)
-  q.enqueue(2)
-  print(q.dequeue())  # Output: 1
-  print(q.dequeue())  # Output: 2
+How to Use:
 
+- Create a stack object.
+- Call the reverse_string function with the stack and the string you want to reverse.
+- The function returns the reversed string.
 
-### 3. Find the Maximum Element in a List Using a Linked List
-- **Task:** Implement a singly linked list and find the maximum element in the list.
-- **Class:** LinkedList
-- **Method:** find_max() -> int
-- **Example**
-  ```python
-  ll = LinkedList()
-  ll.append(3)
-  ll.append(1)
-  ll.append(4)
-  ll.append(2)
-  print(ll.find_max())  # Output: 4
+# 2. Implement a Queue Using Two Stacks
+Purpose: Implement a queue using two stacks, allowing enqueue and dequeue operations to follow the First In, First Out (FIFO) principle.
 
+How to Use:
+- Create a QueueWithStacks object.
+- Use the enqueue method to add elements to the queue.
+- Use the dequeue method to remove and return the front element of the queue. 
 
-### Submission Instructions
-- Fork this repository.
-- Clone the forked repository to your local machine.
-- Create a separate branch for your solutions.
-- Implement the solutions to the above questions in Python.
-- Commit your changes with clear and descriptive messages.
-- Push your changes to your forked repository.
-- Create a pull request (PR) to the original repository with your solutions.
-- Submit the URL of your GitHub repository as your final submission.
+# 3. Find the Maximum Element in a List Using a Linked List
+Purpose: Find the maximum element in a list that is implemented as a singly linked list.
 
-### Submission form 
-https://forms.gle/VUTFyWTXKUPq4CMQA
+How to Use:
+- Create a LinkedList object.
+- Use the append method to add elements to the linked list.
+- Call the find_max method to find and return the maximum element in the list.
+
+# Requirements
+Python 3.2 or above is required to run this project.
+
+# Running the Code
+Simply run the Python scripts containing each implementation to test the functionality. The provided examples demonstrate how to use each implementation.
+
+# Contact
+For any questions or feedback, feel free to reach out.
+
