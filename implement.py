@@ -38,5 +38,5 @@ q = QueueWithStacks()
 q.enqueue(1)  # Add value 1 to the queue
 q.enqueue(2)  # Add value 2 to the queue
 
-print(q.dequeue())  # Remove and print the front element of the queue (should print 8)
-print(q.dequeue())  # Remove and print the next front element of the queue (should print 4)
+print(q.dequeue())  # Remove and print the front element of the queue (should print 1)
+print(q.dequeue())  # Remove and print the next front element of the queue (should print 2)
