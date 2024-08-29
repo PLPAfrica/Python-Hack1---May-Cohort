@@ -18,6 +18,7 @@
 # -  Handle cases where dequeue is called on an empty queue by raising an exception.
 
 # Pseudocode
+
 # Class QueueWithStacks:
 # __init__: Initialize two empty stacks (stack_in and stack_out).
 # enqueue(x): Push x onto stack_in.
