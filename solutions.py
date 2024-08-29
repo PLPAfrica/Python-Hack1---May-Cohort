@@ -41,3 +41,48 @@ class QueueWithStacks:
         # Pop the top element from stack_out, which is the front of the queue
         return self.stack_out.pop() if self.stack_out else None
     
+### 3. Find the Maximum Element in a List Using a Linked List
+class Node:
+    def __init__(self, data):
+        # Initialize a node with data and next pointer
+        self.data = data
+        self.next = None
+
+class LinkedList:
+    def __init__(self):
+        # Initialize the linked list with a head pointer
+        self.head = None
+
+    def append(self, data):
+        # Create a new node with the given data
+        new_node = Node(data)
+        
+        # If the list is empty, make the new node the head
+        if not self.head:
+            self.head = new_node
+            return
+        
+        # Otherwise, traverse to the end of the list and append the new node
+        last_node = self.head
+        while last_node.next:
+            last_node = last_node.next
+        last_node.next = new_node
+
+    def find_max(self) -> int:
+        # If the list is empty, raise an error
+        if not self.head:
+            raise ValueError("The list is empty")
+        
+        # Initialize max_value with the first node's data
+        max_value = self.head.data
+        
+        # Traverse the list to find the maximum value
+        current_node = self.head
+        while current_node:
+            if current_node.data > max_value:
+                max_value = current_node.data
+            current_node = current_node.next
+        
+        return max_value
+
+    
