@@ -48,7 +48,7 @@ def reverse_string(s: str) -> str:
 
 
 def interactive_string_reversal():
-    print("Welcome to the Interactive String Reversal Program!")
+    print("Welcome to the String Reversal Program!")
     print("Enter 'quit' to exit the program.")
 
     while True:
