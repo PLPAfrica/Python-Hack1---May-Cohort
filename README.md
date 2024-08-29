@@ -52,3 +52,29 @@ This repository contains your solutions to three simple data structures and algo
 
 ### Submission form 
 https://forms.gle/VUTFyWTXKUPq4CMQA
+
+
+
+# Solution to Data Structures and Algorithms Hackathon
+
+## Overview
+This repository contains solutions to the hackathon that are implemented in Python.
+
+## Solutions
+1. **Reverse a String Using a Stack**
+   - Implemented using a stack to reverse the string.
+   - Handles edge cases such as empty strings.
+
+2. **Implement a Queue Using Two Stacks**
+   - Uses two stacks to efficiently handle queue operations.
+   - Includes error handling for dequeuing from an empty queue.
+
+3. **Find the Maximum Element in a List Using a Linked List**
+   - Implements a singly linked list to find the maximum value.
+   - Handles the case of an empty linked list.
+
+## How to Run
+1. Clone the repository: `git clone <repository-url>`
+2. Navigate to the directory: `cd <repository-name>`
+3. Run the solutions using Python 3: `python <solution-file>.py`
+
