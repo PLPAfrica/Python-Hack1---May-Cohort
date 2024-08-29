@@ -70,12 +70,18 @@ class LinkedList:
 
 if __name__ == "__main__":
     li = LinkedList()
-    li.append(1)
-    li.append(63)
-    li.append(46)
-    li.append(14)
-    li.append(87)
 
+    # Collect integers from the user
+    while True:
+        try:
+            value = input("Enter an integer to append to the linked list (or type 'done' to finish): ")
+            if value.lower() == 'done':
+                break
+            li.append(int(value))
+        except ValueError:
+            print("Invalid input. Please enter a valid integer.")
+
+    # Find and print the maximum element in the linked list
     try:
         print("The maximum element in the linked list is:", li.find_max())
     except ValueError as e:
