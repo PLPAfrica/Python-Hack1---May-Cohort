@@ -62,6 +62,20 @@ class QueueWithStacks:
         
         return self.stack2[-1]
 
+    def display(self) -> list:
+        """Display the elements in the queue from front to back.
+
+        Returns:
+            list: A list of elements currently in the queue.
+        """
+        # Transfer elements from stack1 to stack2 if stack2 is empty
+        if not self.stack2:
+            while self.stack1:
+                self.stack2.append(self.stack1.pop())
+        
+        # Return the elements in stack2
+        return self.stack2[::-1] + self.stack1
+
 if __name__ == "__main__":
     q = QueueWithStacks()
 
@@ -71,8 +85,9 @@ if __name__ == "__main__":
         print("2. Dequeue")
         print("3. Peek")
         print("4. Check if empty")
-        print("5. Exit")
-        choice = input("Enter your choice (1-5): ")
+        print("5. Display queue")
+        print("6. Exit")
+        choice = input("Enter your choice (1-6): ")
 
         if choice == '1':
             try:
@@ -98,8 +113,11 @@ if __name__ == "__main__":
             print("Queue is empty" if q.is_empty() else "Queue is not empty")
 
         elif choice == '5':
+            print("Current queue contents:", q.display())
+
+        elif choice == '6':
             print("Exiting...")
             break
 
         else:
-            print("Invalid choice. Please enter a number between 1 and 5.")
+            print("Invalid choice. Please enter a number between 1 and 6.")
