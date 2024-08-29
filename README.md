@@ -1,11 +1,28 @@
     *SOLUTIONS TO THE ALGORITHMS
     * Reversing a string using a stack
+
 - A stack is a data structure that follows the Last in, First OUT(LIFO) principle, meaning that the last item you put in the stack is the first one you get out. i.e when you place a chair on top of a stack, and you want a chair you take the top one first.
   *Steps to reverse a string using a stack.
   1. You initialize the stack, like creating an empty stack.
   2. Then one can push the characters on to the stack, as each character is added it goes to the top.
   3. Pop characters from the stack- the characters will be removed one by one(pop), this will give the characters in reverse order.
   4. Building the reversed string - as we pop each character from the stack, we append it to a new string, This new string will be the reversed version of the original string.
+
+  *How the stack works
+  * initial string "hello"
+  * The Push Phase;
+    - Push 'h' → Stack: ['h']
+    - Push 'e' → Stack: ['h', 'e']
+    - Push 'l' → Stack: ['h', 'e', 'l']
+    - Push 'l' → Stack: ['h', 'e', 'l', 'l']
+    - Push 'o' → Stack: ['h', 'e', 'l', 'l', 'o']
+  * The Pop Phase
+    - Pop → 'o', Stack: ['h', 'e', 'l', 'l'], Reversed String: 'o'
+    - Pop → 'l', Stack: ['h', 'e', 'l'], Reversed String: 'ol'
+    - Pop → 'l', Stack: ['h', 'e'], Reversed String: 'oll'
+    - Pop → 'e', Stack: ['h'], Reversed String: 'olle'
+    - Pop → 'h', Stack: [], Reversed String: 'olleh'
+  * Now the final reversed string becomes ("olleh")
 
 
 
