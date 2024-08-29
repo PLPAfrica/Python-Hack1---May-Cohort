@@ -67,6 +67,16 @@
    - Dequeue:
       - Since stack2 is empty, stack1 is transferred to stack2, and 3 is   popped. The output is 3.
 
+## Finding the Maximum Element in a List Using a Singly Linked List
+  - A linked list is a datastructure consisting of nodes where each node contains data and a reference to the next node in the sequence.
+  - Linked lists do not store elements in contagious memory locations unlike arrays making them more flexible but slightly more complex to work with.
+        - solving the solution
+  * create a singly linked list - a type of linked list where each node points to the next node and the last node points to none, indicating the end of the list.
+  * Traverse the Linked List - comparing node values with the current maximum value.
+  * Find the Maximum Element - when we find a hihgher value we keep track of it and keep updating if we find another higher value.
+  
+
+
 
 
 
