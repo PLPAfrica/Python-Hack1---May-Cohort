@@ -1,5 +1,5 @@
-    # SOLUTIONS TO THE ALGORITHMS
-    # Reversing a string using a stack
+    ## SOLUTIONS TO THE ALGORITHMS
+    ## Reversing a string using a stack
 
 - A stack is a data structure that follows the Last in, First OUT(LIFO) principle, meaning that the last item you put in the stack is the first one you get out. i.e when you place a chair on top of a stack, and you want a chair you take the top one first.
   *Steps to reverse a string using a stack.
@@ -55,17 +55,17 @@
     - stack2: [2]
   - Dequeue (Pop from stack2):
     - Pop → stack2: [], Output: 2
-  * Output Example
+* Output Example
    - Enqueue 1: stack1 becomes [1]
    - Enqueue 2: stack1 becomes [1, 2]
    - Dequeue:
-    - stack1 is transferred to stack2, making stack2 [2, 1].
-    - The first element (1) is popped from stack2, so the output is 1.
+      - stack1 is transferred to stack2, making stack2 [2, 1].
+      - The first element (1) is popped from stack2, so the output is 1.
    - Enqueue 3: stack1 becomes [3].
    - Dequeue:
-    - The next element (2) is popped from stack2, so the output is 2.
+      - The next element (2) is popped from stack2, so the output is 2.
    - Dequeue:
-    - Since stack2 is empty, stack1 is transferred to stack2, and 3 is   popped. The output is 3.
+      - Since stack2 is empty, stack1 is transferred to stack2, and 3 is   popped. The output is 3.
 
 
 
