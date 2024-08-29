@@ -5,12 +5,12 @@ class QueueWithStacks:
     """
     
     def __init__(self):
-        """Initializes two stacks used to manage the queue."""
+        """Initialize two stacks used to manage the queue."""
         self.stack1 = []
         self.stack2 = []
 
     def enqueue(self, x: int):
-        """Adds an element to the back of the queue.
+        """Add an element to the back of the queue.
 
         Args:
             x (int): The element to be added to the queue.
@@ -18,7 +18,7 @@ class QueueWithStacks:
         self.stack1.append(x)
 
     def dequeue(self) -> int:
-        """Removes and return the front element of the queue.
+        """Remove and return the front element of the queue.
 
         Returns:
             int: The front element of the queue.
@@ -64,12 +64,42 @@ class QueueWithStacks:
 
 if __name__ == "__main__":
     q = QueueWithStacks()
-    q.enqueue(1)
-    q.enqueue(2)
-    
-    try:
-        print(q.dequeue())  # Expected output: 1
-        print(q.dequeue())  # Expected output: 2
-        print(q.dequeue())  # Expected to raise an IndexError
-    except IndexError as e:
-        print(f"Error: {e}")
+
+    while True:
+        print("\nQueue Operations:")
+        print("1. Enqueue")
+        print("2. Dequeue")
+        print("3. Peek")
+        print("4. Check if empty")
+        print("5. Exit")
+        choice = input("Enter your choice (1-5): ")
+
+        if choice == '1':
+            try:
+                value = int(input("Enter an integer to enqueue: "))
+                q.enqueue(value)
+                print(f"Enqueued {value}")
+            except ValueError:
+                print("Invalid input. Please enter a valid integer.")
+
+        elif choice == '2':
+            try:
+                print(f"Dequeued {q.dequeue()}")
+            except IndexError as e:
+                print(f"Error: {e}")
+
+        elif choice == '3':
+            try:
+                print(f"Front element: {q.peek()}")
+            except IndexError as e:
+                print(f"Error: {e}")
+
+        elif choice == '4':
+            print("Queue is empty" if q.is_empty() else "Queue is not empty")
+
+        elif choice == '5':
+            print("Exiting...")
+            break
+
+        else:
+            print("Invalid choice. Please enter a number between 1 and 5.")
