@@ -1,16 +1,16 @@
 class Stack:
     """A simple implementation of a stack data structure using a Python list."""
     
-    def init(self):
-        """Initialize an empty stack."""
+    def __init__(self):
+        """Initializes an empty stack."""
         self.items = []
 
     def push(self, item):
-        """Push an item onto the stack."""
+        """Pushes an item onto the stack."""
         self.items.append(item)
 
     def pop(self):
-        """Pop an item off the stack and return it.
+        """Pops an item off the stack and return it.
         
         Returns:
             The item from the top of the stack.
@@ -31,7 +31,7 @@ class Stack:
         return len(self.items) == 0
 
 def reverse(s: str) -> str:
-    """Reverse a given string using a stack.
+    """Reverses a given string using a stack.
 
     Args:
         s (str): The string to be reversed.
@@ -56,7 +56,7 @@ def reverse(s: str) -> str:
 
     return reversed_str
 
-if __name__ == "main":
+if __name__ == "__main__":
     value = input("Enter string characters: ")
     try:
         print(reverse(value))
