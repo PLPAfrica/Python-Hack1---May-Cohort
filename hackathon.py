@@ -38,4 +38,6 @@ class Node:
 class LinkedList:
     def __init__(self):
         self.head = None 
-        
+
+    def append(self, data: int):
+        new_node = Node(data)
