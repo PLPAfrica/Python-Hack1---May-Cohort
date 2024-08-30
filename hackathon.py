@@ -61,3 +61,5 @@ class LinkedList:
             if current.data > max_value:
                 max_value = current.data
             current = current.next
+        
+        return max_value
