@@ -2,20 +2,20 @@
 
 class QueueWithStacks:
     def __init__(self):
-        self.stack1 = [] 
-        self.stack2 = [] 
+        self.stack_1 = [] 
+        self.stack_2 = [] 
 
     def enqueue(self, x: int):
-        self.stack1.append(x)
+        self.stack_1.append(x)
 
     def dequeue(self) -> int:
-        if not self.stack2:
-            while self.stack1:
-                self.stack2.append(self.stack1.pop())
+        if not self.stack_2:
+            while self.stack_1:
+                self.stack_2.append(self.stack_1.pop())
 
         
-        if self.stack2:
-            return self.stack2.pop()
+        if self.stack_2:
+            return self.stack_2.pop()
         return None  
 
 #Example 
