@@ -6,3 +6,5 @@ def reverse_string(s: str) -> str:
     reversed_string = ''.join(stack.pop() for _ in range(len(stack)))
 
     return reversed_string
+print(reverse_string("hello"))
+
