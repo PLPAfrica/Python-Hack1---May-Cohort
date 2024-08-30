@@ -53,3 +53,6 @@ class LinkedList:
     def find_max(self) -> int:
         if self.head is None:
             raise ValueError("List is empty")
+    
+        max_value = self.head.data
+        current = self.head 
