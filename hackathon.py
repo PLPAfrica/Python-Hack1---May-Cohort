@@ -12,4 +12,5 @@
 class QueueWithStacks:
     def__init__(self):
         self.stack1 = []
+        self.stack2 = []
  
