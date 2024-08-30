@@ -9,22 +9,28 @@
 # print(reverse_string("hello"))
 
 # 2. Implement a Queue Using Two Stacks
-class QueueWithStacks:
-    def __init__(self):
-        self.stack1 = []
-        self.stack2 = []
+# class QueueWithStacks:
+#     def __init__(self):
+#         self.stack1 = []
+#         self.stack2 = []
 
-    def enqueue(self, x: int):
-        self.stack1.append(x)
+#     def enqueue(self, x: int):
+#         self.stack1.append(x)
 
-    def dequeue(self) -> int:
-        if not self.stack2:
-            while self.stack1:
-                self.stack2.append(self.stack1.pop())
-        return self.stack2.pop()
+#     def dequeue(self) -> int:
+#         if not self.stack2:
+#             while self.stack1:
+#                 self.stack2.append(self.stack1.pop())
+#         return self.stack2.pop()
 
-q = QueueWithStacks()
-q.enqueue(1)
-q.enqueue(2)
-print(q.dequeue())
-print(q.dequeue())
+# q = QueueWithStacks()
+# q.enqueue(1)
+# q.enqueue(2)
+# print(q.dequeue())
+# print(q.dequeue())
+
+# 3. Find the maximum element in a list using a linked list
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
