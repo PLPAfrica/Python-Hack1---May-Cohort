@@ -63,3 +63,10 @@ class LinkedList:
             current = current.next
         
         return max_value
+    
+    11 = LinkedList()
+    11.append(3)
+    11.append(1)
+    11.append(4)
+    11.append(2)
+    print(11.find_max())
