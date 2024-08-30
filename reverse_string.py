@@ -45,27 +45,3 @@ def reverse_string(s: str) -> str:
         reversed_string.append(stack.pop())
 
     return ''.join(reversed_string)
-
-
-def interactive_string_reversal():
-    print("Welcome to the String Reversal Program!")
-    print("Enter 'quit' to exit the program.")
-
-    while True:
-        user_input = input("\nEnter a string to reverse: ")
-        
-        if user_input.lower() == 'quit':
-            print("Thank you for using the String Reversal Program. Goodbye!")
-            break
-
-        try:
-            result = reverse_string(user_input)
-            print(f"Original: {user_input}")
-            print(f"Reversed: {result}")
-            print(f"Is palindrome: {result == user_input}")
-        except ValueError as e:
-            print(f"Error: {e}")
-
-
-if __name__ == "__main__":
-    interactive_string_reversal()

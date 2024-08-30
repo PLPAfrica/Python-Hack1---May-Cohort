@@ -1,3 +1,5 @@
+from typing import Any
+
 class Stack:
     """A basic implementation of a Stack data structure."""
 
@@ -5,7 +7,7 @@ class Stack:
         """Initialize an empty stack."""
         self.items = []
 
-    def push(self, item):
+    def push(self, item: Any) -> None:
         """
         Add an item to the top of the stack.
         
@@ -14,7 +16,7 @@ class Stack:
         """
         self.items.append(item)
 
-    def pop(self):
+    def pop(self) -> Any:
         """
         Remove and return the top item from the stack.
         
@@ -28,7 +30,7 @@ class Stack:
             return self.items.pop()
         raise IndexError("Stack is empty")
 
-    def peek(self):
+    def peek(self) -> Any:
         """
         Return the top item from the stack without removing it.
         
@@ -42,7 +44,7 @@ class Stack:
             return self.items[-1]
         raise IndexError("Stack is empty")
 
-    def is_empty(self):
+    def is_empty(self) -> bool:
         """
         Check if the stack is empty.
         
@@ -51,7 +53,7 @@ class Stack:
         """
         return len(self.items) == 0
 
-    def size(self):
+    def size(self) -> int:
         """
         Get the number of items in the stack.
         
@@ -72,21 +74,21 @@ class QueueWithStacks:
         self.stack_newest = Stack()  # Stack for newly added elements
         self.stack_oldest = Stack()  # Stack for elements ready to be dequeued
 
-    def enqueue(self, x: int) -> None:
+    def enqueue(self, x: Any) -> None:
         """
         Add an element to the back of the queue.
         
         Args:
-            x (int): The element to be added to the queue.
+            x: The element to be added to the queue.
         """
         self.stack_newest.push(x)
 
-    def dequeue(self) -> int:
+    def dequeue(self) -> Any:
         """
         Remove and return the front element from the queue.
         
         Returns:
-            int: The front element of the queue.
+            The front element of the queue.
         
         Raises:
             IndexError: If the queue is empty.
@@ -94,12 +96,12 @@ class QueueWithStacks:
         self._shift_stacks()
         return self.stack_oldest.pop()
 
-    def peek(self) -> int:
+    def peek(self) -> Any:
         """
         Return the front element of the queue without removing it.
         
         Returns:
-            int: The front element of the queue.
+            The front element of the queue.
         
         Raises:
             IndexError: If the queue is empty.
@@ -134,11 +136,10 @@ class QueueWithStacks:
             IndexError: If both stacks are empty (i.e., the queue is empty).
         """
         if self.stack_oldest.is_empty():
+            if self.stack_newest.is_empty():
+                raise IndexError("Queue is empty")
             while not self.stack_newest.is_empty():
                 self.stack_oldest.push(self.stack_newest.pop())
-
-        if self.stack_oldest.is_empty():
-            raise IndexError("Queue is empty")
 
     def display(self) -> None:
         """
@@ -150,55 +151,3 @@ class QueueWithStacks:
             # Combine elements from both stacks, reversing the newest stack
             elements = list(self.stack_oldest.items) + list(reversed(self.stack_newest.items))
             print("Front ->", " <- ".join(map(str, elements)), "<- Back")
-
-
-def interactive_queue_demo():
-    """
-    Provide an interactive demonstration of the QueueWithStacks implementation.
-    Users can perform various queue operations and see the results.
-    """
-    q = QueueWithStacks()
-    
-    while True:
-        # Display menu options
-        print("\nQueue Operations:")
-        print("1. Enqueue")
-        print("2. Dequeue")
-        print("3. Peek")
-        print("4. Is Empty?")
-        print("5. Size")
-        print("6. Display Queue")
-        print("7. Exit")
-        
-        choice = input("Enter your choice (1-7): ")
-        
-        try:
-            if choice == '1':
-                value = int(input("Enter value to enqueue: "))
-                q.enqueue(value)
-                print(f"{value} enqueued successfully")
-            elif choice == '2':
-                value = q.dequeue()
-                print(f"Dequeued value: {value}")
-            elif choice == '3':
-                value = q.peek()
-                print(f"Front of the queue: {value}")
-            elif choice == '4':
-                print(f"Is queue empty? {q.is_empty()}")
-            elif choice == '5':
-                print(f"Queue size: {q.size()}")
-            elif choice == '6':
-                q.display()
-            elif choice == '7':
-                print("Exiting the program. Goodbye!")
-                break
-            else:
-                print("Invalid choice. Please try again.")
-        except ValueError:
-            print("Invalid input. Please enter a valid integer.")
-        except IndexError as e:
-            print(f"Error: {e}")
-
-
-if __name__ == "__main__":
-    interactive_queue_demo()
