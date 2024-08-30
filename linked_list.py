@@ -32,7 +32,7 @@ class LinkedList:
             current = current.next  # Move to the next node
         return max_value
 
-# Example usage
+# Example usage of linked list
 if __name__ == "__main__":
     ll = LinkedList()
     ll.append(3)

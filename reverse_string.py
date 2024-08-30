@@ -32,6 +32,6 @@ def reverse_string(s: str) -> str:
         
     return reversed_str
 
-# Example usage
+# Example usage of reverse stringy
 if __name__ == "__main__":
     print(reverse_string("hello")) 
