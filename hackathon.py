@@ -1,33 +1,33 @@
 # 1. Reverse a string using a stack
-# def reverse_string(s: str) -> str:
-#     stack = []
-#     for char in s:
-#         stack.append(char)
-#     reversed_string = ''.join(stack.pop() for _ in range(len(stack)))
+def reverse_string(s: str) -> str:
+    stack = []
+    for char in s:
+        stack.append(char)
+    reversed_string = ''.join(stack.pop() for _ in range(len(stack)))
 
-#     return reversed_string
-# print(reverse_string("hello"))
+    return reversed_string
+print(reverse_string("hello"))
 
 # 2. Implement a Queue Using Two Stacks
-# class QueueWithStacks:
-#     def __init__(self):
-#         self.stack1 = []
-#         self.stack2 = []
+class QueueWithStacks:
+    def __init__(self):
+        self.stack1 = []
+        self.stack2 = []
 
-#     def enqueue(self, x: int):
-#         self.stack1.append(x)
+    def enqueue(self, x: int):
+        self.stack1.append(x)
 
-#     def dequeue(self) -> int:
-#         if not self.stack2:
-#             while self.stack1:
-#                 self.stack2.append(self.stack1.pop())
-#         return self.stack2.pop()
+    def dequeue(self) -> int:
+        if not self.stack2:
+            while self.stack1:
+                self.stack2.append(self.stack1.pop())
+        return self.stack2.pop()
 
-# q = QueueWithStacks()
-# q.enqueue(1)
-# q.enqueue(2)
-# print(q.dequeue())
-# print(q.dequeue())
+q = QueueWithStacks()
+q.enqueue(1)
+q.enqueue(2)
+print(q.dequeue())
+print(q.dequeue())
 
 # 3. Find the maximum element in a list using a linked list
 class Node:
@@ -64,9 +64,9 @@ class LinkedList:
         
         return max_value
     
-    11 = LinkedList()
-    11.append(3)
-    11.append(1)
-    11.append(4)
-    11.append(2)
-    print(11.find_max())
+ll = LinkedList()
+ll.append(3)
+ll.append(1)
+ll.append(4)
+ll.append(2)
+print(ll.find_max())
