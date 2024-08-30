@@ -60,3 +60,4 @@ class LinkedList:
         while current:
             if current.data > max_value:
                 max_value = current.data
+            current = current.next
