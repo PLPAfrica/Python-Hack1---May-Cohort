@@ -17,7 +17,7 @@ class QueueWithStacks:
             raise IndexError("Dequeue from empty queue")
         return self.stack2.pop()  # Pop from stack2 to get the front element
 
-# Example usage
+# Example usage of queue with two stacks
 if __name__ == "__main__":
     q = QueueWithStacks()
     q.enqueue(1)
