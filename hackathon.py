@@ -49,3 +49,7 @@ class LinkedList:
             while current.next:
                 current = current.next
             current.next = new_node
+    
+    def find_max(self) -> int:
+        if self.head is None:
+            raise ValueError("List is empty")
