@@ -56,3 +56,6 @@ class LinkedList:
     
         max_value = self.head.data
         current = self.head 
+
+        while current:
+            
