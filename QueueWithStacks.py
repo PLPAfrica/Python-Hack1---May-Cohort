@@ -116,7 +116,7 @@ class QueueWithStacks:
         Returns:
             bool: True if the queue is empty, False otherwise.
         """
-        return self.stack_newest.is_empty() and self.stack_oldest.is_empty()
+        return not self.stack_oldest.items and not self.stack_newest.items
 
     def size(self) -> int:
         """
@@ -148,6 +148,6 @@ class QueueWithStacks:
         if self.is_empty():
             print("Queue is empty")
         else:
-            # Combine elements from both stacks, reversing the newest stack
-            elements = list(self.stack_oldest.items) + list(reversed(self.stack_newest.items))
+            # Combine elements from both stacks, reversing the oldest stack
+            elements = list(reversed(self.stack_oldest.items)) + list(self.stack_newest.items)
             print("Front ->", " <- ".join(map(str, elements)), "<- Back")

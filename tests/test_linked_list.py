@@ -45,6 +45,7 @@ class TestLinkedList(unittest.TestCase):
         self.ll.append(-20)
         self.assertEqual(self.ll.find_max(), 10)
 
+
     def test_edge_cases(self):
         # Test appending None
         with self.assertRaises(TypeError):
@@ -54,6 +55,7 @@ class TestLinkedList(unittest.TestCase):
         self.ll.append(5)
         with self.assertRaises(TypeError):
             self.ll.append("string")
+
         
         # Test with very large numbers
         self.ll.append(10**1000)

@@ -1,6 +1,6 @@
 from QueueWithStacks import QueueWithStacks
 from reverse_string import reverse_string
-from max_element import LinkedList
+from max_element import LinkedList, Node
 
 def interactive_queue_demo():
     q = QueueWithStacks()

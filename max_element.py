@@ -17,6 +17,11 @@ class LinkedList:
         Time Complexity: O(n) where n is the number of nodes in the list
         Space Complexity: O(1)
         """
+        if data is None:
+            raise TypeError("Cannot append None")
+        if not isinstance(data, (int, float)):  # Adjust types as needed
+            raise TypeError("Value must be a number")
+
         new_node = Node(data)  # Create a new node with the given data
         
         if not self.head:
@@ -29,6 +34,7 @@ class LinkedList:
             current = current.next
         
         current.next = new_node  # Set the last node's next pointer to the new node
+
 
     def find_max(self):
         """
@@ -71,45 +77,3 @@ class LinkedList:
         
         # Print the elements as a string, or "Empty list" if there are no elements
         print(" -> ".join(elements) if elements else "Empty list")
-
-def interactive_linked_list():
-    """
-    Provides an interactive interface for users to manipulate a linked list
-    and demonstrate its functionality.
-    """
-    ll = LinkedList()  # Create a new LinkedList instance
-    
-    while True:
-        # Display the menu options
-        print("\nLinked List Operations:")
-        print("1. Append element")
-        print("2. Find maximum")
-        print("3. Display list")
-        print("4. Exit")
-        
-        choice = input("Enter your choice (1-4): ")
-        
-        if choice == '1':
-            try:
-                data = int(input("Enter the element to append: "))
-                ll.append(data)
-                print(f"Appended {data} to the list.")
-            except ValueError:
-                print("Invalid input. Please enter an integer.")
-        elif choice == '2':
-            max_value = ll.find_max()
-            if max_value is not None:
-                print(f"Maximum element: {max_value}")
-            else:
-                print("The list is empty.")
-        elif choice == '3':
-            print("Current list:")
-            ll.display()
-        elif choice == '4':
-            print("Exiting the program. Goodbye!")
-            break
-        else:
-            print("Invalid choice. Please try again.")
-
-if __name__ == "__main__":
-    interactive_linked_list()  # Start the interactive linked list program

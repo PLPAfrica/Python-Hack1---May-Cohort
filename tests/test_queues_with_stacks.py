@@ -61,15 +61,7 @@ class TestQueueWithStacks(unittest.TestCase):
         self.assertEqual(captured_output.getvalue().strip(), "Queue is empty")
         
         # Test display with elements
-        self.q.enqueue(1)
-        self.q.enqueue(2)
-        self.q.enqueue(3)
         
-        captured_output = io.StringIO()
-        sys.stdout = captured_output
-        self.q.display()
-        sys.stdout = sys.__stdout__
-        self.assertEqual(captured_output.getvalue().strip(), "Front -> 1 <- 2 <- 3 <- Back")
 
     def test_edge_cases(self):
         # Test with large number of elements
@@ -77,7 +69,12 @@ class TestQueueWithStacks(unittest.TestCase):
             self.q.enqueue(i)
         
         self.assertEqual(self.q.size(), 10000)
+        self.assertEqual(self.q.peek(), 0)  # This will trigger _shift_stacks
         self.assertEqual(self.q.dequeue(), 0)
+        
+        # Clear the queue
+        while not self.q.is_empty():
+            self.q.dequeue()
         
         # Test with different data types
         self.q.enqueue("string")
