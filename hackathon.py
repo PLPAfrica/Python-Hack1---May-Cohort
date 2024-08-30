@@ -13,4 +13,8 @@ class QueueWithStacks:
     def__init__(self):
         self.stack1 = []
         self.stack2 = []
+
+    def enqueue(self, x: int):
+        self.stack1.append(x)
+        
  
