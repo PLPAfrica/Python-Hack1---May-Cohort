@@ -10,7 +10,7 @@
 
 # 2. Implement a Queue Using Two Stacks
 class QueueWithStacks:
-    def__init__(self):
+    def __init__(self):
         self.stack1 = []
         self.stack2 = []
 
@@ -22,3 +22,9 @@ class QueueWithStacks:
             while self.stack1:
                 self.stack2.append(self.stack1.pop())
         return self.stack2.pop()
+
+q = QueueWithStacks()
+q.enqueue(1)
+q.enqueue(2)
+print(q.dequeue())
+print(q.dequeue())
