@@ -24,6 +24,7 @@ q.enqueue(2)
 q.display()
 
 q.dequeue()
+
 print(f"after dequeing the element")
 print(q.dequeue())
 print(q.dequeue())

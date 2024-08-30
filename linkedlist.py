@@ -50,5 +50,6 @@ def find_max():
 input_list = [34,54,1,222,55,3,9]
 max_intr = find_max()
 
+
 print(f"The maximum value is: ", max_intr)
 
