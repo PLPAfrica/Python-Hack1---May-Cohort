@@ -1,0 +1,7 @@
+self.stack1.append(7)
+
+    # if not self.stack2:
+    #      while self.stack1:
+    #             self.stack2.append(self.stack1.pop())
+        
+    # print(f"self.stack2.pop()")
