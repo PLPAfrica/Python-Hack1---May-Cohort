@@ -19,7 +19,7 @@ This repository contains your solutions to three simple data structures and algo
   - `dequeue() -> int`: Removes and returns the front element of the queue.
 - **Example:**
   ```python
-  q = QueueWithStacks()
+  q = QueueStacks()
   q.enqueue(1)
   q.enqueue(2)
   print(q.dequeue())  # Output: 1
