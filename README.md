@@ -1,54 +1,72 @@
-# Data Structures and Algorithms Practice
+Data Structures and Algorithms Solutions
+Overview
+This repository contains solutions for three fundamental data structures and algorithms challenges implemented in Python. The challenges demonstrate the use of stacks, queues, and linked lists to solve common problems.
 
-This repository contains your solutions to three simple data structures and algorithms problems. Please follow the instructions below to complete the tasks and submit your work.
+Challenges
 
-## Questions
+1. Reverse a String Using a Stack
+   Task: Implement a stack-based approach to reverse a string.
 
-### 1. Reverse a String Using a Stack
-- **Task:** Implement a stack data structure to reverse a string.
-- **Function:** `reverse_string(s: str) -> str`
-- **Example:**
-  - Input: `"hello"`
-  - Output: `"olleh"`
+Function: reverse_string(s: str) -> str
 
-### 2. Implement a Queue Using Two Stacks
-- **Task:** Implement a queue using two stacks.
-- **Class:** `QueueWithStacks`
-- **Methods:**
-  - `enqueue(x: int)`: Adds an element to the queue.
-  - `dequeue() -> int`: Removes and returns the front element of the queue.
-- **Example:**
-  ```python
-  q = QueueWithStacks()
-  q.enqueue(1)
-  q.enqueue(2)
-  print(q.dequeue())  # Output: 1
-  print(q.dequeue())  # Output: 2
+Description: This solution utilizes a stack to reverse the characters of a given string. By pushing each character onto the stack and then popping them off, the characters are retrieved in reverse order.
 
+Example:
 
-### 3. Find the Maximum Element in a List Using a Linked List
-- **Task:** Implement a singly linked list and find the maximum element in the list.
-- **Class:** LinkedList
-- **Method:** find_max() -> int
-- **Example**
-  ```python
-  ll = LinkedList()
-  ll.append(3)
-  ll.append(1)
-  ll.append(4)
-  ll.append(2)
-  print(ll.find_max())  # Output: 4
+    input_str = "hello"
+    print(reverse_string(input_str))  # Output: "olleh"
 
+2. Implement a Queue Using Two Stacks
+   Task: Implement a queue using two stacks to manage enqueue and dequeue operations.
 
-### Submission Instructions
-- Fork this repository.
-- Clone the forked repository to your local machine.
-- Create a separate branch for your solutions.
-- Implement the solutions to the above questions in Python.
-- Commit your changes with clear and descriptive messages.
-- Push your changes to your forked repository.
-- Create a pull request (PR) to the original repository with your solutions.
-- Submit the URL of your GitHub repository as your final submission.
+Class: QueueWithStacks
 
-### Submission form 
-https://forms.gle/VUTFyWTXKUPq4CMQA
+Methods:
+
+enqueue(x: int): Adds an element to the queue.
+dequeue() -> int: Removes and returns the front element of the queue.
+Description: This implementation uses two stacks to simulate the behavior of a queue. Elements are added to one stack and removed from another, allowing FIFO (First-In-First-Out) order to be maintained.
+
+Example:
+
+    queue = QueueWithStacks()
+    queue.enqueue(1)
+    queue.enqueue(2)
+    print(queue.dequeue())  # Output: 1
+    print(queue.dequeue())  # Output: 2
+
+3. Find the Maximum Element in a Linked List
+   Task: Implement a singly linked list and find the maximum element.
+
+Class: LinkedList
+
+Method: find_max() -> int
+
+Description: This solution involves implementing a singly linked list where nodes store integer values. The find_max method traverses the list to find and return the maximum value.
+
+Example:
+
+    linked_list = LinkedList()
+    linked_list.append(3)
+    linked_list.append(1)
+    linked_list.append(4)
+    linked_list.append(2)
+    print(linked_list.find_max())  # Output: 4
+
+Requirements
+Python 3.x
+How to Run
+Clone the repository:
+
+    git clone <repository-url>
+
+Navigate to the repository directory:
+
+    cd <repository-directory>
+
+Run the Python files to execute the solutions:
+
+    python <file-name>.py
+
+License
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/<jdamour12>/<Python-Hack1---May-Cohort/tree/jdamour-branch>/blob/main/LICENSE) file for details.
