@@ -11,6 +11,9 @@ This repository contains your solutions to three simple data structures and algo
   - Input: `"hello"`
   - Output: `"olleh"`
 
+<!-- Solution -->
+A stack is a linear data structure that stores items in a LIFO or FILO manner. In this task, we shall use this principle to implement a stack data structure to reverse a string. The steps will be: 1. Push each character of the string onto the stack. 2. Pop characters from the stack to build the reversed string.
+
 ### 2. Implement a Queue Using Two Stacks
 - **Task:** Implement a queue using two stacks.
 - **Class:** `QueueWithStacks`
