@@ -25,24 +25,23 @@ The LinkedList class implements a singly linked list, and the find_max method fi
 
 To run the code, simply execute the Python files using a Python interpreter. For example, you can run the reverse_string function using the following command:
 
-Edit
-Copy code
+
 python -c "from reverse_string import reverse_string; print(reverse_string('hello'))"
 This will output the reversed string "olleh".
 
 Similarly, you can run the QueueWithStacks class using the following command:
 
-Edit
-Copy code
+
 python -c "from queue_with_stacks import QueueWithStacks; q = QueueWithStacks(); q.enqueue(1); q.enqueue(2); print(q.dequeue()); print(q.dequeue())"
 This will output the dequeued elements 1 and 2.
 
 Finally, you can run the LinkedList class using the following command:
 
-Edit
-Copy code
 python -c "from linked_list import LinkedList; ll = LinkedList(); ll.append(3); ll.append(1); ll.append(4); ll.append(2); print(ll.find_max())"
 This will output the maximum element 4.
+
+If you also prefer running the code all at once you can use the following command:
+python data_structures_practice.py
 
 # Note
 
