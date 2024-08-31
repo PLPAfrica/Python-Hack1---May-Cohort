@@ -1,7 +1,6 @@
 # Data Structures and Algorithms Practice Hackathon
 
-This repository contains solutions to three simple data structures and algorithms problems. Please follow the instructions below to complete the tasks and submit your work.
-
+This repository contains solutions to three simple data structures and algorithms problems.
 ## Questions
 
 ### 1. Reverse a String Using a Stack
