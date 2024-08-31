@@ -12,6 +12,8 @@ class LinkedList:
         self.head = None
     
     def append(self, value: int):
+        if not isinstance(value, int):
+            raise TypeError("Only integers can be added to the list")
         new_node = Node(value)
         if not self.head:
             self.head = new_node
@@ -23,7 +25,7 @@ class LinkedList:
     
     def find_max(self) -> int:
         if not self.head:
-            raise ValueError("List is empty")
+            raise ValueError("List is empty, cannot find maximum")
         
         max_value = self.head.value
         current = self.head
