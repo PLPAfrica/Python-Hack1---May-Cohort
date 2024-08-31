@@ -93,6 +93,6 @@ If you'd like to contribute to this project, please fork the repository and crea
 
 ## Author
 
-- [Your Name](https://github.com/CynthiaWahome)
+- [Cynthia Wahome](https://github.com/CynthiaWahome)
 
 ---
