@@ -19,6 +19,7 @@ class QueueWithStacks:
         return self.out_stack.pop()  # Return the front element
 
 # Example
+""" __name__ == "__main__": It helps in creating modular code where your script can serve dual purposes—both as a standalone script and as a reusable module"""
 if __name__ == "__main__":
     q = QueueWithStacks()
     q.enqueue(1)
