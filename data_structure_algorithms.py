@@ -71,6 +71,7 @@ class MyLinkedList:
             current = current.next
         return max_value
 
+
 ll = MyLinkedList()
 ll.append(7)
 ll.append(2)
