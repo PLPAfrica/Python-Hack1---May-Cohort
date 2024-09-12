@@ -66,3 +66,4 @@ class LinkedList:
                 max_value = current.value
             current = current.next
         return max_value
+ 
